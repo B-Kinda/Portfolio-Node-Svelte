@@ -1,25 +1,26 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "argon2": "^0.44.0",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "pg": "^8.17.1",
-    "pg-hstore": "^2.3.4",
-    "sanitize": "^2.1.2",
-    "sequelize": "^6.37.7"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.11",
-    "sequelize-cli": "^6.6.5"
-  }
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "db:migrate": "sequelize-cli db:migrate"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "argon2": "^0.44.0",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1",
+        "pg": "^8.17.1",
+        "pg-hstore": "^2.3.4",
+        "sanitize": "^2.1.2",
+        "sequelize": "^6.37.7"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.11",
+        "sequelize-cli": "^6.6.5"
+    }
 }
