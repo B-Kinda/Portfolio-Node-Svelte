@@ -2,6 +2,7 @@
     "name": "backend",
     "version": "1.0.0",
     "main": "index.js",
+    "type": "commonjs",
     "scripts": {
         "dev": "nodemon server.js",
         "db:migrate": "sequelize-cli db:migrate"
@@ -12,8 +13,10 @@
     "description": "",
     "dependencies": {
         "argon2": "^0.44.0",
+        "cors": "^2.8.5",
         "dotenv": "^17.2.3",
         "express": "^5.2.1",
+        "helmet": "^8.1.0",
         "pg": "^8.17.1",
         "pg-hstore": "^2.3.4",
         "sanitize": "^2.1.2",
