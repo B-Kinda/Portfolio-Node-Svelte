@@ -1,8 +1,8 @@
-require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
-const sequelize = require("./config/database"); // require !
+const sequelize = require("./config/database");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/health", (req, res) => {
+app.get("/api/health", (_req, res) => {
     res.json({
         message: "Backend OK !",
         db: "connected",
