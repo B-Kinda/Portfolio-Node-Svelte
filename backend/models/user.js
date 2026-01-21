@@ -1,53 +1,45 @@
 import { Model, DataTypes } from "sequelize";
 import { sequelize } from "./index.js";
 
-export class Projet extends Model {}
-Projet.init(
+export class User extends Model {}
+User.init(
     {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
         },
-        title: {
-            type: DataTypes.STRING(255),
+        Nom: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true,
             },
         },
-        description: {
-            type: DataTypes.STRING(255),
+        Prenom: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true,
             },
         },
-        image: {
-            type: DataTypes.STRING(255),
+        Bio: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: false,
+            },
+        },
+        Role: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true,
-            },
-        },
-        lien: {
-            type: DataTypes.STRING(255),
-            allowNull: false,
-            validate: {
-                notEmpty: true,
-            },
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: "users",
-                key: "id",
             },
         },
     },
     {
         sequelize,
-        tableName: "projets",
+        tableName: "users",
     },
 );

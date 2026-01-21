@@ -1,8 +1,10 @@
-const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const sequelize = require("./config/database");
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import { sequelize } from "./models/index.mjs";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;

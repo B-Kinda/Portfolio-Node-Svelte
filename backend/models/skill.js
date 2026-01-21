@@ -1,37 +1,23 @@
 import { Model, DataTypes } from "sequelize";
 import { sequelize } from "./index.js";
 
-export class Projet extends Model {}
-Projet.init(
+export class Skill extends Model {}
+Skill.init(
     {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
         },
-        title: {
-            type: DataTypes.STRING(255),
+        skill_name: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true,
             },
         },
-        description: {
-            type: DataTypes.STRING(255),
-            allowNull: false,
-            validate: {
-                notEmpty: true,
-            },
-        },
-        image: {
-            type: DataTypes.STRING(255),
-            allowNull: false,
-            validate: {
-                notEmpty: true,
-            },
-        },
-        lien: {
-            type: DataTypes.STRING(255),
+        level: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 notEmpty: true,
@@ -48,6 +34,6 @@ Projet.init(
     },
     {
         sequelize,
-        tableName: "projets",
+        tableName: "skills",
     },
 );

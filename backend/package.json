@@ -1,10 +1,10 @@
 {
     "name": "backend",
     "version": "1.0.0",
+    "type": "module",
     "main": "index.js",
-    "type": "commonjs",
     "scripts": {
-        "dev": "nodemon server.js",
+        "dev": "nodemon server.mjs",
         "db:migrate": "sequelize-cli db:migrate"
     },
     "keywords": [],
